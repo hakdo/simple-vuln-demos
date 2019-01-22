@@ -1,0 +1,12 @@
+html
+  head
+    title="Fake Search"
+  body
+    h1 Search me!
+    form(name="myform" id="myform")
+      label(for="search") Search here <br>
+        input(type="text" id="search" name="q" placeholder="Inject something")
+      button(type="submit") Search
+    hr
+    p!= injected
+    a(href="/logout") Log out

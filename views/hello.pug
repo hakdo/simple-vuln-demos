@@ -1,0 +1,21 @@
+html
+  head
+    title="Hello"
+  body
+    h1 Demo app for XSS and SQLi!
+    p This app is for demoing SQLi and XSS. Here are the endpoints:
+    ul
+     li
+      a(href='/login') Login form (SQLi)
+     li
+      a(href='/search') Search form (XSS)
+     li
+      a(href='/logout') Logout (not vulnerable)
+
+    h2 Usage
+    p
+    | The app has one user in the SQlite user db that's part of the repo: admin/admin.
+    | The DB does not require any credentials.
+    p SQL injection to bypass logon: ' OR 1=1;-- in username or password field.
+    p XSS: the X-XSS-Protection header is turned off, any javascript will execute form search field.
+    | The XSS demo is reflective.
